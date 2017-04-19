@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista_Clientes</title>
+</head>
+<body>
+  <div>
+    <h1><a href="">Aluguel de Roupas</a></h1>
+  </div>
+  <div>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>tipo</th>
+            <th>cor</th>
+            <th>tamanho</th>
+            <th>valor</th>
+            <th>descrição</th>
+        </tr>
+        {% for roupa in lista_roupas %}
+        <tr>
+            <td> {{roupa.nome}} </td>
+            <td> {{roupa.tipo}} </td>
+            <td> {{roupa.cor}} </td>
+            <td> {{roupa.tamanho}} </td>
+            <td> {{roupa.valor}} </td>
+            <td> {{roupa.descricao}} </td>
+            <td> {{roupa.situacao}} </td>
+            <td> <a href="/cliente/deletar_roupa/?roupa_id={{roupa.id}}">Deletar</a> </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+
+</body>
+</html>
